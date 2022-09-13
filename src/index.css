@@ -1,9 +1,19 @@
 body {
   padding: 20px;
+  background: linear-gradient(red, yellow, green);
+  height: 650px;
 }
 button {
   margin-right: 10px;
 }
 #divButtons{
   padding-left: 45%;
-}
+ }
+
+#titulo{
+  color: aliceblue;
+  margin-left: 44%;
+  width: 200px; 
+  border: 1px solid #000000;
+  box-shadow: 1px 2px 3px black;
+ }

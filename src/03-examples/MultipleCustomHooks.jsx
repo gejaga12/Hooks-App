@@ -1,6 +1,7 @@
 import { useFetch, useCounter } from "../hooks/index";
 import { Quote, LoadingQuote } from "./";
 
+
 export const MultipleCustomHooks = () => {
   const { counter, increment, decrement } = useCounter(1);
   const { data, isLoading, hasError } = useFetch(
@@ -10,7 +11,7 @@ export const MultipleCustomHooks = () => {
 
   return (
     <>
-      <h1 className="text-center">UseEffect</h1>
+      <h1 className="text-center" id="titulo">UseEffect</h1>
       <hr />
 
       {/* {isLoading ? (
