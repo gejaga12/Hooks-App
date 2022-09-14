@@ -1,6 +1,6 @@
 body {
   padding: 20px;
-  background: linear-gradient(red, yellow, green);
+  /* background: linear-gradient(red, yellow, green); */
   height: 625px;
 }
 button {
