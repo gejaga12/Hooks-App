@@ -39,9 +39,7 @@ export const TodoApp = () => {
 
   return (
     <>
-      <h1>
-        TodoApp: 10 <small>Pendientes: 2</small>
-      </h1>
+      <h1 className="text-center" id="titulo">LISTA DE TAREAS</h1>
       <hr />
 
       <div className="row">

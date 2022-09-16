@@ -1,6 +1,6 @@
 body {
   padding: 20px;
-  /* background: linear-gradient(red, yellow, green); */
+  background: cornflowerblue;
   height: 625px;
 }
 button {
@@ -11,9 +11,11 @@ button {
  }
 
 #titulo{
+  background: red;
+  justify-content: center;
   color: aliceblue;
-  margin-left: 44%;
-  width: 200px; 
+  margin-left: 32%;
+  width: 400px; 
   border: 1px solid #000000;
   box-shadow: 1px 2px 3px black;
  }
