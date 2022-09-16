@@ -1,53 +1,32 @@
-import { useEffect, useReducer } from "react";
+import { useTodos } from "../hooks";
 import { TodoAdd } from "./TodoAdd";
 import { TodoList } from "./TodoList";
-import { todoReducer } from "./todoReducer";
-
-const initialState = [
-  //   {
-  //     id: new Date().getTime(),
-  //     description: "Boca Juniors",
-  //     done: false,
-  //   },
-];
-
-const init = () => {
-  return JSON.parse(localStorage.getItem("todos")) || [];
-};
 
 export const TodoApp = () => {
-  const [todos, dispatch] = useReducer(todoReducer, initialState, init);
-
-  useEffect(() => {
-    localStorage.setItem("todos", JSON.stringify(todos));
-  }, [todos]);
-
-  const handleNewTodo = (todo) => {
-    const action = {
-      type: "[TODO] Add Todo",
-      payload: todo,
-    };
-    dispatch(action);
-  };
-
-  const handleDeleteTodo = (id) => {
-    dispatch({
-      type: "[TODO] Remove Todo",
-      payload: id,
-    });
-  };
+  const { todos, handleNewTodo, handleDeleteTodo, handleToggleTodo } =
+    useTodos();
 
   return (
     <>
-      <h1 className="text-center" id="titulo">LISTA DE TAREAS</h1>
-      <hr />
-
+      <h1 className="text-center mb-4" id="titulo">
+        LISTA DE TAREAS
+      </h1>
       <div className="row">
         <div className="col-7">
-          <TodoList todos={todos} onDeleteTodo={handleDeleteTodo} />
+          <h4 id="tareas">
+            Tareas a realizar: <small className="me-5"> {todos.length} </small>
+            Tareas pendientes:
+            <small> {todos.filter((todo) => !todo.done).length} </small>
+          </h4>
+          <hr />
+          <TodoList
+            todos={todos}
+            onDeleteTodo={handleDeleteTodo}
+            onToggleTodo={handleToggleTodo}
+          />
         </div>
         <div className="col-5">
-          <h4>Agregar Tarea</h4>
+          <h4 id="agregar">Agregar Nueva Tarea</h4>
           <hr />
           <TodoAdd onNewTodo={handleNewTodo} />
         </div>

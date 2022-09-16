@@ -19,3 +19,23 @@ button {
   border: 1px solid #000000;
   box-shadow: 1px 2px 3px black;
  }
+
+ #tareas{
+  padding-left: 20%;
+  background: rgb(8, 85, 133);
+  color: aliceblue;
+  text-shadow: 1px 1px black;
+  height: 45px;
+  padding-top: 7px;
+  border: 1px solid #000000;
+ }
+
+ #agregar{
+  padding-left: 28%;
+  background: rgb(8, 85, 133);
+  color: aliceblue;
+  text-shadow: 1px 1px black;
+  height: 45px;
+  padding-top: 7px;
+  border: 1px solid #000000;
+ }
