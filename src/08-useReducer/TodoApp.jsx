@@ -8,25 +8,27 @@ export const TodoApp = () => {
 
   return (
     <>
-    <div id="tituloPrincipal">
-      <h1 className="text-center mb-4" id="titulo">
-        LISTA DE TAREAS
-      </h1>
-    </div>
+      <div id="tituloPrincipal">
+        <h1 className="text-center mb-4" id="titulo">
+          LISTA DE TAREAS
+        </h1>
+      </div>
       <div className="row">
         <div className="col-7">
-          <h4 className="text-center" id="tareas">
-            Realizar:
-            <small id="num" className="me-5">
-              {" "}
-              {todos.length}
-            </small>
-            Pendientes:
-            <small id="num">
-              {" "}
-              {todos.filter((todo) => !todo.done).length}{" "}
-            </small>
-          </h4>
+          <div id="tareaPrincipal">
+            <h4 className="text-center" id="tareas">
+              Realizar:
+              <small id="num" className="me-5">
+                {" "}
+                {todos.length}
+              </small>
+              Pendientes:
+              <small id="num">
+                {" "}
+                {todos.filter((todo) => !todo.done).length}{" "}
+              </small>
+            </h4>
+          </div>
           <hr />
           <TodoList
             todos={todos}

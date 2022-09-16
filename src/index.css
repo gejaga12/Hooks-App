@@ -57,4 +57,11 @@ button {
   display: flex;
   align-content: center;
   justify-content: center;
+  font-family: Georgia, serif;
+}
+
+#tareaPrincipal {
+  display: flex;
+  align-content: center;
+  justify-content: center;
 }

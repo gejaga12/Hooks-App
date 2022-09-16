@@ -1,27 +1,27 @@
-const initialState = [
-  {
-    id: 1,
-    todo: "Boca Juniors",
-    done: false,
-  },
-];
+// const initialState = [
+//   {
+//     id: 1,
+//     todo: "Boca Juniors",
+//     done: false,
+//   },
+// ];
 
-const todoReducer = (state = initialState, action = {}) => {
-  if (action.type === "[TODO] add todo") {
-    return [...state, action.payload];
-  }
-  return state;
-};
+// const todoReducer = (state = initialState, action = {}) => {
+//   if (action.type === "[TODO] add todo") {
+//     return [...state, action.payload];
+//   }
+//   return state;
+// };
 
-let todos = todoReducer();
+// let todos = todoReducer();
 
-const newTodo = { id: 2, todo: "Real Madrid", done: false };
+// const newTodo = { id: 2, todo: "Real Madrid", done: false };
 
-const addTodoAction = {
-  type: "[TODO] add todo",
-  payload: newTodo,
-}; 
+// const addTodoAction = {
+//   type: "[TODO] add todo",
+//   payload: newTodo,
+// }; 
 
-todos = todoReducer(todos, addTodoAction);
+// todos = todoReducer(todos, addTodoAction);
 
-console.log({ state: todos });
+// console.log({ state: todos });
