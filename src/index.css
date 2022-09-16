@@ -12,9 +12,9 @@ button {
 
 #titulo {
   background: red;
-  justify-content: center;
+  /* justify-content: center; */
   color: aliceblue;
-  margin-left: 32%;
+  /* margin-left: 32%; */
   width: 400px;
   border: 1px solid #000000;
   box-shadow: 1px 2px 3px black;
@@ -49,6 +49,12 @@ button {
   border-radius: 50%;
 }
 
-#btnAgregar{
+#btnAgregar {
   padding-left: 40%;
+}
+
+#tituloPrincipal {
+  display: flex;
+  align-content: center;
+  justify-content: center;
 }
