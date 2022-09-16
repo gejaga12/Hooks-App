@@ -14,8 +14,8 @@ export const TodoApp = () => {
       <div className="row">
         <div className="col-7">
           <h4 className="text-center" id="tareas">
-            Tareas a realizar:<small id="num" className="me-5"> {todos.length}</small>
-            Tareas pendientes:
+            Realizar:<small id="num" className="me-5"> {todos.length}</small>
+            Pendientes:
             <small id="num"> {todos.filter((todo) => !todo.done).length} </small>
           </h4>
           <hr />
