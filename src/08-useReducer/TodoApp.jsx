@@ -13,10 +13,10 @@ export const TodoApp = () => {
       </h1>
       <div className="row">
         <div className="col-7">
-          <h4 id="tareas">
-            Tareas a realizar: <small className="me-5"> {todos.length} </small>
+          <h4 className="text-center" id="tareas">
+            Tareas a realizar:<small id="num" className="me-5"> {todos.length}</small>
             Tareas pendientes:
-            <small> {todos.filter((todo) => !todo.done).length} </small>
+            <small id="num"> {todos.filter((todo) => !todo.done).length} </small>
           </h4>
           <hr />
           <TodoList
@@ -26,7 +26,7 @@ export const TodoApp = () => {
           />
         </div>
         <div className="col-5">
-          <h4 id="agregar">Agregar Nueva Tarea</h4>
+          <h4 id="agregar" className="text-center">Agregar Nueva Tarea</h4>
           <hr />
           <TodoAdd onNewTodo={handleNewTodo} />
         </div>

@@ -28,9 +28,11 @@ export const TodoAdd = ({ onNewTodo }) => {
         value={description}
         onChange={onInputChange}
       />
-      <button type="submit" className="btn btn-danger mt-2">
-        Agregar
-      </button>
+      <div id="btnAgregar">
+        <button type="submit" className="btn btn-success mt-2">
+          Agregar
+        </button>
+      </div>
     </form>
   );
 };
